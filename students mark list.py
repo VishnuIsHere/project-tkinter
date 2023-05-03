@@ -109,10 +109,13 @@ def display():
     lb12=Label(w,text=int(english3.get())+int(hindi5.get())+int(science7.get())+int(maths9.get()))
     lb12.place(x=150,y=600)
 
-    lb11=Label(w,text='PERCENTAGE OBTAINED :',bg='grey',fg='black')
-    lb11.place(x=25,y=630)
-
-    lb13=Label(w,text=int(english3.get())+int(hindi5.get())+int(science7.get())+int(maths9.get()))
+    lb13=Label(w,text='PERCENTAGE OBTAINED :',bg='grey',fg='black')
+    lb13.place(x=25,y=630)
+    sum=int(english3.get())+int(hindi5.get())+int(science7.get())+int(maths9.get())
+    result=sum*100
+    s=result/400
+    lb14=Label(w,text=s)
+    lb14.place(x=172,y=630)
 
 
 bt=Button(text='LOGIN',command=display,bg='red',fg='white',width=15)
